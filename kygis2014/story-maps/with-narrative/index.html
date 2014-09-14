@@ -1,0 +1,87 @@
+<html>
+<head>
+<!-- The web browser window title -->
+<title>Narrative Based Story Map</title>
+
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="http://cdn.leafletjs.com/leaflet-0.7.3/leaflet.css" /><!-- Map styles -->
+<link rel="stylesheet" href="storymap.css" /><!-- Story Map styles -->
+</head>
+<body>
+
+
+<!-- The three main elements for the story map -->
+<div id="title">Transportation &amp; Scott County Development</div> <!-- Change to any title you want -->
+<div id="story"></div> <!-- Holds the story html, don't change -->
+<div id="map"></div> <!-- Holds the background map, don't change -->
+
+<!-- Element for stepping backwards in the story -->
+<div id="rewind">Previous</div> <!-- Edit the text to your likeing -->
+
+<!-- In this section calls are made to scripts that create the map and start the story -->
+<script src="http://cdn.leafletjs.com/leaflet-0.7.3/leaflet.js"></script>
+<script type="text/javascript" src="http://maps.stamen.com/js/tile.stamen.js?v1.2.4"></script>
+<script>
+	var baseMap = "osm"; // valid options "osm", "toner", "terrain", "watercolor", "mapbox" (requires 'username.mapid' in storymap.js)
+	var startCoordinate = [38.284008, -84.584942]; // Change this to your own start position (lat/long)
+	var startZoom = 11; // Change this to you desired start zoom level
+	var titleOpacity = 1; // Set the opacity for the title element
+	var storyOpacity = 1; // Set the opacity for the story element
+	var panTime = 2; // Set the time (seconds) for panning the map
+	var titleTextColor = "#101010"; // The main title text color
+	var titleBackground = "#D5D5D5"; // The main title background color
+	var storyTextColor = "#101010"; // Story text color
+	var storyBackground = "#EEEEEE"; // Story background color
+</script>
+<script src="storymap.js"></script> <!-- load start settings and functions for the storymap -->
+
+<!-- This is where the story begins! -->
+<script>
+
+// startText is the text used first in the story.
+// use <h1></h1> for headlines
+// use class='videoWrapper' for videoclipps (see example below)
+// do not use "embed" straight up for video, if you want to adapt the size of the video to the screen size.
+// tested html-tags: <b></b>, <i></i>, <u></u>, <a></a>, <br>, <img>, but most should work...
+// don't use " inside texts, use ' if necessary.
+var startText = "<h1>Introduction</h1><br><img src='http://i1185.photobucket.com/albums/z344/buspainter2005/gtown-streetcar_zpsc4e133bc.jpg' /><br><br>In the past few years, Scott County has become one of the fastest growing areas in the state of Kentucky. One reason is the easy access to amenities in Lexington, Cincinnati, and Louisville via a comprehensive network of state highways and both I-75 and I-64.<br><br><img src='http://i1185.photobucket.com/albums/z344/buspainter2005/i75-construction_zps71383a82.jpg' /><br><br>Indeed, the history of Scott County and its cities - Georgetown, Stamping Ground, and Sadieville - all owe some part of their existence to the influence of transportation and mobility. This story map looks at various stages of transportation history in Scott County, moving in time from the days before European-descended settlers came to the area, through the heyday of the railroad, to the present automobile society. We'll stop once at each city to highlight how transportation has contributed and continues to contribute to life in Scott County.<br><br><i>Click in the map to advance the story.</i>";
+
+// position, bubbleText and storyText below are connected and the order is therefore very important
+
+// position is a list with all story positions, except the start position.
+var position = [
+	[38.271667, -84.684444], // Stamping Ground
+	[38.391667, -84.535556], //Sadieville
+	[38.209722, -84.56] //Georgetown
+];
+
+// bubbleText is a list with the content of the pop-ups for each marker.
+// you can use HTML here as well.
+// The showPopUp variable dictates if the pop-ups will be shown as default
+var showPopUp = false;
+var useMarker = true; //disable the use of markers
+var bubbleText = [
+	"Stamping Ground<br><a href='http://stampinggroundkentucky.com/' target='_blank'>Visit web page</a>", // Stamping Ground popup
+	"Sadieville<br><a href='http://www.cityofsadieville.com/' target='_blank'>Visit web page</a>",
+	"Georgetown<br><a href='http://georgetownky.gov/' target='_blank'>Visit web page</a>"
+];
+
+// storyText is a list with the story content.
+// it's important to match position, bubbleText and storyText in the correct order.
+
+var storyText = [
+	"<H1>Stamping Ground</H1><br><iframe width='100%' height='166' scrolling='no' frameborder='no' src='https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/167597843&amp;color=ff5500&amp;auto_play=false&amp;hide_related=false&amp;show_comments=true&amp;show_user=true&amp;show_reposts=false'></iframe><br><i>Listen to the audio above for poem on Stamping Ground and the buffalos who made it</i><br><br>Stamping Ground is an odd name for a place. It is said that the area called Stamping Ground was a popular stop for buffalo herd. Their hooves, great in number as they were, had the effect of compacting the grounds where they roamed, thus the name. But Stamping Ground also sits at the confluence of several buffalo roads. These wide tracks were formed by the numerous buffalo as they trekked throughout the land. While the buffalo may now be gone, their legacy lives on. Today, several of the roads in the area, including the road to Great Crossings, west of Georgetown, are supposed to have been built atop these buffalo roads.", // first story HTML
+
+	"<h1>Sadieville</h1><br><br><img src='http://i1185.photobucket.com/albums/z344/buspainter2005/sadieville-depot_zpseae27ca7.jpg'/><br><br>Sadieville developed as direct result of the 1876 construction of the Cincinnati Southern Railroad through northern Scott County. It was officially incorporated in 1880 and rose to prominence along the Southern Railroad as the largest US market for yearling mules and colts.<br><br><div class='videoWrapper'><iframe src='//www.youtube.com/embed/V0FzVuHWYY4?t=35s' frameborder='0' allowfullscreen></iframe></div>",
+
+	"<h1>Georgetown</h1><img src='http://i1185.photobucket.com/albums/z344/buspainter2005/toyota-10mil_zpsd5374d67.jpg'><br><i>The first and 10 millionth car off the Georgetown Toyota plant</i><br><br>While Georgetown's 18th century founding long predates the automobile, the path towards growth for the county seat is hard to imagine without it. In 1988, Toyota opened its first plant in the United States on the north side of the city. With the 10 millionth car coming off the line in 2014, the Georgetown is not only shaped by the automobile, but a major player in the auto market nationwide."
+
+];
+
+
+</script>
+</body>
+</html>
+
+
