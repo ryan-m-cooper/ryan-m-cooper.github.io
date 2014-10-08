@@ -53,10 +53,10 @@ footer {
    position:fixed;
    left:0px;
    bottom:0px;
-   height:60px;
+   height:40px;
    width:100%;
    background:rgba(102, 141, 60, 75);
-   padding: 10px;
+   padding-top: 10px;
    
    font-family: 'Roboto Slab';
 }
