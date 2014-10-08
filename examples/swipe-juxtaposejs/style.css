@@ -49,3 +49,11 @@ div.jx-credit {
 	min-height: 15px;
 	padding: 10px;
 }
+#footer {
+   position:fixed;
+   left:0px;
+   bottom:0px;
+   height:30px;
+   width:100%;
+   background:#999;
+}
