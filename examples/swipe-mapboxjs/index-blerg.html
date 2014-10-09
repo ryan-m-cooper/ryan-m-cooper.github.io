@@ -2,30 +2,27 @@
 <html>
 <head>
 <meta charset=utf-8 />
-<title>Swipe between layers</title>
+<title>Example-Swipte-MapboxJS</title>
 <meta name='viewport' content='initial-scale=1,maximum-scale=1,user-scalable=no' />
-<script src='https://api.tiles.mapbox.com/mapbox.js/v2.1.2/mapbox.js'></script>
+<!-- MapboxJS css -->
 <link href='https://api.tiles.mapbox.com/mapbox.js/v2.1.2/mapbox.css' rel='stylesheet' />
-<style>
-  body { margin:0; padding:0; }
-  #map { position:absolute; top:0; bottom:0; width:100%; }
-</style>
+<!-- Swipe css -->
+<link rel="stylesheet" href="swipe-mapboxjs.css">
+<!-- Custom css -->
+<link rel="stylesheet" href="style.css">
+<!-- MapboxJS script -->
+<script src='https://api.tiles.mapbox.com/mapbox.js/v2.1.2/mapbox.js'></script>
 </head>
+
 <body>
-<style>
-.range {
-  position:absolute;
-  width:100%;
-  }
-.leaflet-top .leaflet-control-zoom {
-  top:20px;
-  }
-</style>
+<h1>MapboxJS Example</h1>
+<h3>Swipe Comparison of Georgetown, KY Aerial Imagery</h3>
+<h5>1959 &amp; 2012</h5>
 
 <div id='map'></div>
 <input id='range' class='range' type='range' min='0' max='1.0' step='any' />
 
-<script>
+<script type="text/javascript">
 L.mapbox.accessToken = 'pk.eyJ1IjoicmNvb3BlciIsImEiOiJGRFNpMkQwIn0.uQkzg6GPp3wJvEUOEWkI6Q';
 var map = L.mapbox.map('map');
 L.mapbox.tileLayer('rcooper.4n6irudi').addTo(map);
@@ -43,9 +40,17 @@ function clip() {
 
 range['oninput' in range ? 'oninput' : 'onchange'] = clip;
 map.on('move', clip);
-map.setView([49.434,-123.272], 7);
+map.setView([38.2100,-84.5598], 15);
 
 clip();
 </script>
+
+<footer>
+<a href="http://ryan-m-cooper.com/">ryan-m-cooper.com</a>
+</footer>
+
+
+<!-- Swipe js -->
+<!-- <script src='swipe-mapboxjs.js'></script> -->
 </body>
 </html>
