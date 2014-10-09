@@ -12,13 +12,10 @@ body {
     -moz-background-size: auto;
     -o-background-size: auto;
     background-size: auto;
-    margin:  0;
+    margin: 8px;
     padding: 0;
+    
 }
-div.all{
-	max-height: 950px;
-}
-
 h1, h2, h3, h4, h5, h6 {
 	font-weight: 400;
 	line-height: 15px;
@@ -33,33 +30,4 @@ h3 {
 }
 h5 {
 	line-height: 0px;
-}
-div.juxtapose {
-	position: relative;
-	max-width: 950px;
-	max-height: 90%;
-	z-index: 15;
-	margin: auto;
-}
-div.jx-label {
-	font-family: 'Roboto Slab';
-}
-div.jx-credit {
-	font-family: 'Roboto Slab';
-	background: rgba(102, 141, 60, 75);
-	min-height: 15px;
-	padding: 10px;
-}
-footer {
-   position:fixed;
-   left:0px;
-   bottom:0px;
-   height:20px;
-   width:100%;
-   background:rgba(102, 141, 60, 75);
-   padding-bottom: 7px;
-   padding-right: 13px;
-   
-   font-family: 'Roboto Slab';
-   text-align: right;
 }
