@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset=utf-8 />
+<title>Swipe between layers</title>
+<meta name='viewport' content='initial-scale=1,maximum-scale=1,user-scalable=no' />
+<script src='https://api.tiles.mapbox.com/mapbox.js/v2.1.4/mapbox.js'></script>
+<link href='https://api.tiles.mapbox.com/mapbox.js/v2.1.4/mapbox.css' rel='stylesheet' />
+<style>
+  body { margin:0; padding:0; }
+  #map { position:absolute; top:0; bottom:0; width:100%; }
+</style>
+</head>
+<body>
+<style>
+.range {
+  position:absolute;
+  width:100%;
+  }
+.leaflet-top .leaflet-control-zoom {
+  top:20px;
+  }
+</style>
+
+<div id='map'></div>
+<input id='range' class='range' type='range' min='0' max='1.0' step='any' />
+
+<script>
+ L.mapbox.accessToken = 'pk.eyJ1IjoicmNvb3BlciIsImEiOiJGRFNpMkQwIn0.uQkzg6GPp3wJvEUOEWkI6Q';
+var map = L.mapbox.map('map');
+L.mapbox.tileLayer('rcooper.4n6irudi').addTo(map);
+
+var overlay = L.mapbox.tileLayer('rcooper.8g33ow29').addTo(map);
+var range = document.getElementById('range');
+
+function clip() {
+  var nw = map.containerPointToLayerPoint([0, 0]),
+      se = map.containerPointToLayerPoint(map.getSize()),
+      clipX = nw.x + (se.x - nw.x) * range.value;
+
+  overlay.getContainer().style.clip = 'rect(' + [nw.y, clipX, se.y, nw.x].join('px,') + 'px)';
+}
+
+range['oninput' in range ? 'oninput' : 'onchange'] = clip;
+map.on('move', clip);
+map.setView([38.2100, -84.5598], 15);
+
+clip();
+</script>
+</body>
+</html>
