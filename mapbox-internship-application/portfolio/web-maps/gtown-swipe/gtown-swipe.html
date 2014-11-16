@@ -27,7 +27,7 @@
 
 <script>
  L.mapbox.accessToken = 'pk.eyJ1IjoicmNvb3BlciIsImEiOiJGRFNpMkQwIn0.uQkzg6GPp3wJvEUOEWkI6Q';
-var map = L.mapbox.map('map');
+var map = L.mapbox.map('map'), {zoomControl: false};
 L.mapbox.tileLayer('rcooper.4n6irudi').addTo(map);
 
 var overlay = L.mapbox.tileLayer('rcooper.8g33ow29').addTo(map);
