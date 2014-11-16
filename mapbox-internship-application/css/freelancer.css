@@ -4,16 +4,18 @@
  * For details, see http://www.apache.org/licenses/LICENSE-2.0.
  */
 
+
 body {
     overflow-x: hidden;
 }
 
 p {
-    font-size: 20px;
+    font-size: 16px;
+    font-family: "Noto Sans";
 }
 
 p.small {
-    font-size: 16px;
+    font-size: 12px;
 }
 
 a,
@@ -32,7 +34,7 @@ h4,
 h5,
 h6 {
     text-transform: uppercase;
-    font-family: Montserrat,"Helvetica Neue",Helvetica,Arial,sans-serif;
+    font-family: "averia sans libre",Helvetica,Arial,sans-serif;
     font-weight: 700;
 }
 
@@ -48,7 +50,7 @@ hr.star-primary {
 
 hr.star-light:after,
 hr.star-primary:after {
-    content: "\f005";
+    content: "\f041";
     display: inline-block;
     position: relative;
     top: -.8em;
@@ -63,7 +65,7 @@ hr.star-light {
 
 hr.star-light:after {
     color: #fff;
-    background-color: #18bc9c;
+    background-color: #2980b9;
 }
 
 hr.star-primary {
@@ -82,7 +84,7 @@ hr.star-primary:after {
 header {
     text-align: center;
     color: #fff;
-    background: #18bc9c;
+    background: #2980b9;
 }
 
 header .container {
@@ -98,14 +100,13 @@ header img {
 header .intro-text .name {
     display: block;
     text-transform: uppercase;
-    font-family: Montserrat,"Helvetica Neue",Helvetica,Arial,sans-serif;
+    font-family: "averia sans libre","Helvetica Neue",Helvetica,Arial,sans-serif;
     font-size: 2em;
     font-weight: 700;
 }
 
 header .intro-text .skills {
     font-size: 1.25em;
-    font-weight: 300;
 }
 
 @media(min-width:768px) {
@@ -149,7 +150,7 @@ header .intro-text .skills {
 
 .navbar {
     text-transform: uppercase;
-    font-family: Montserrat,"Helvetica Neue",Helvetica,Arial,sans-serif;
+    font-family: "averia sans libre",Helvetica,Arial,sans-serif;
     font-weight: 700;
 }
 
@@ -180,8 +181,13 @@ section h2 {
 }
 
 section.success {
-    color: #fff;
-    background: #18bc9c;
+    color: #2c3e50;
+    background: #fff;
+}
+
+section.belize {
+    color: #ecf0f1;
+    background: #2980b9;
 }
 
 @media(max-width:767px) {
@@ -443,3 +449,43 @@ footer .footer-below {
     -ms-transform: rotate(90deg);
     transform: rotate(90deg);
 }
+
+/*Added stuff*/
+.resume-details {
+    font-family: "noto sans";
+    list-style-type: none;
+}
+.resume-entity {
+    background-color: #2c3e50;
+    padding: 10px;
+ }
+
+.portfolio-head {
+    text-align: center;
+}
+.portfolio-bottom {
+    margin-top: 10px;
+    margin-left: auto;
+    margin-right: auto;
+    width: 80%;
+    text-align: center;
+}
+.portfolio-bottom > p {
+    text-align: center;
+}
+.portfolio-bottom > ul {
+    list-style-type: none;
+    padding: 0;
+}
+#portfolio-button {
+    background-color: #fff;
+    border: solid #3498db 2px;
+    color: #3498db;
+    border-radius: 0;
+}
+#portfolio-button:hover {
+    background-color: #3498db;
+    color: #fff;
+    border: solid #fff 2px;
+}
+
