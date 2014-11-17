@@ -270,8 +270,8 @@ section.belize {
 .btn-outline:focus,
 .btn-outline:active,
 .btn-outline.active {
-    border: solid 2px #fff;
-    color: #18bc9c;
+    border: solid 2px #2980b9;
+    color: #2980b9;
     background: #fff;
 }
 
