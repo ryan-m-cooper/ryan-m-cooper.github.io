@@ -1,0 +1,18 @@
+.timeline li {
+  margin-bottom: 10px;
+}
+.timeline li .timelineUnit ul {
+  color: #666;
+  margin-left: 20px;
+}
+
+/*Dash for ul list icon*/
+/*Special thanks to Andres Hernandez, https://codepen.io/andresh83/pen/meNwoy/*/
+.timeline li .timelineUnit ul li:before {
+  content: '-';
+  position: absolute;
+  margin-left: -20px;
+}
+.timeline li .timelineUnit ul li:first-child {
+  margin-top: 10px;
+}
