@@ -1,3 +1,3 @@
-ryan-m-cooper.github.io
-=======================
-[![Stories in Ready](https://badge.waffle.io/ryan-m-cooper/ryan-m-cooper.github.io.png?label=ready&title=Ready)](http://waffle.io/ryan-m-cooper/ryan-m-cooper.github.io)
+# ryan-m-cooper.github.io
+
+My personal website. Includes general info about me, resume, portfolio pieces, and contact info.
