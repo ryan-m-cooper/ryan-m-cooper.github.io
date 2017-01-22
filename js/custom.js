@@ -1,5 +1,5 @@
-jQuery(document).ready(function(){ 
-	
+jQuery(document).ready(function(){
+
 	/* ---------------------------------------------------------------------- */
 	/*	Custom Functions
 	/* ---------------------------------------------------------------------- */
@@ -10,24 +10,24 @@ jQuery(document).ready(function(){
     if (location.href.indexOf("#") != -1) {
         $logo.show();
     }
-	// Show logo 
+	// Show logo
 	$('.menu .tabs a').click(function() {
 	  $logo.fadeIn('slow');
 	});
 	// Hide logo
 	$('.tab-profile').click(function() {
 	  $logo.fadeOut('slow');
-	});	
+	});
 
 	/* ---------------------------------------------------------------------- */
 	/*	Resume
 	/* ---------------------------------------------------------------------- */
-	
+
 	// Rating bars
-	$(".skills li .rating").each(function(index,e) { 
+	$(".skills li .rating").each(function(index,e) {
 
 		// Vars
-		var 
+		var
 			$ratNum = 10,
 			$rat = $(e).attr("data-rat"),
 			$point = "<span></span>";
@@ -38,7 +38,7 @@ jQuery(document).ready(function(){
 		     $ratNum--;
 		}
 
-		$(e).find("span").each(function(index,e) { 
+		$(e).find("span").each(function(index,e) {
 			if(index >= $rat) return false;
 			// Append Disabled Rats
 			$(e).animate({
@@ -51,7 +51,7 @@ jQuery(document).ready(function(){
 	/* ---------------------------------------------------------------------- */
 	/*	About
 	/* ---------------------------------------------------------------------- */
-	
+
 	// Profile Photo Slider
 	 $(".photo-inner ul").carouFredSel({
         direction           : "left",
@@ -60,7 +60,7 @@ jQuery(document).ready(function(){
         scroll 			: {
             items           : 1,
             fx 				: 'crossfade',
-            duration        : 1500,                        
+            duration        : 1500,
             wipe    		: true
         },
 	    swipe: {
@@ -68,16 +68,16 @@ jQuery(document).ready(function(){
 	    },
         items: {
             width: 153
-        }           
+        }
     });
-	 
+
 	/* ---------------------------------------------------------------------- */
 	/*	Menu
 	/* ---------------------------------------------------------------------- */
-	
+
 	// Needed variables
 	var $content 		= $("#content");
-	
+
 	// Run easytabs
   	$content.easytabs({
 	  animate			: true,
@@ -89,7 +89,7 @@ jQuery(document).ready(function(){
 	  tabActiveClass	:'active',
 	});
 
-	
+
 	// Hover menu effect
 	$content.find('.tabs li a').hover(
 		function() {
@@ -105,18 +105,18 @@ jQuery(document).ready(function(){
         direction           : "left",
  	    circular: false,
     	infinite: false,
-        pagination  		: "#menu-controls",  
+        pagination  		: "#menu-controls",
         auto    			: false,
         scroll 			: {
             items           : 1,
-            duration        : 300,                        
+            duration        : 300,
             wipe    : true
         },
-		prev	: {	
+		prev	: {
 			button	: "#menu-prev",
 			key		: "right"
 		},
-		next	: { 
+		next	: {
 			button	: "#menu-next",
 			key		: "left"
 		},
@@ -129,12 +129,12 @@ jQuery(document).ready(function(){
               min: 2,
               max: 7
             }
-        }           
+        }
     });
 	/* ---------------------------------------------------------------------- */
 	/*	Cats Filter
-	/* ---------------------------------------------------------------------- */ 
-	
+	/* ---------------------------------------------------------------------- */
+
 	var $catsfilter 		= $('.cats-filter');
 
 	// Copy categories to item classes
@@ -142,17 +142,17 @@ jQuery(document).ready(function(){
 		var currentOption = $(this).attr('data-filter');
 		$(this).parent().parent().find('a').removeClass('current');
 		$(this).addClass('current');
-	});	
+	});
 
 	/* ---------------------------------------------------------------------- */
 	/*	Portfolio
-	/* ---------------------------------------------------------------------- */ 
-	
+	/* ---------------------------------------------------------------------- */
+
 	// Needed variables
 	var $plist	 	= $('#portfolio-list');
 	var $pfilter 		= $('#portfolio-filter');
-		
-	// Run Isotope  
+
+	// Run Isotope
 	$plist.isotope({
 		filter				: '*',
 		layoutMode   		: 'masonry',
@@ -160,12 +160,12 @@ jQuery(document).ready(function(){
 		duration			: 750,
 		easing				: 'linear'
 	   }
-	});	
-	
-	// Isotope Filter 
+	});
+
+	// Isotope Filter
 	$pfilter.find('a').click(function(){
 	  var selector = $(this).attr('data-filter');
-		$plist.isotope({ 
+		$plist.isotope({
 		filter				: selector,
 		animationOptions	: {
 		duration			: 750,
@@ -174,16 +174,16 @@ jQuery(document).ready(function(){
 	   }
 	  });
 	  return false;
-	});	
-	
-	// Portfolio image animation 
+	});
+
+	// Portfolio image animation
 	$plist.find('img').adipoli({
 		'startEffect' 	: 'transparent',
 		'hoverEffect' 	: 'boxRandom',
 		'imageOpacity' 	: 0.6,
 		'animSpeed' 	: 100,
 	});
-	
+
 	/* ---------------------------------------------------------------------- */
 	/*	prettyPhoto
 	/* ---------------------------------------------------------------------- */
@@ -198,11 +198,11 @@ jQuery(document).ready(function(){
 	/* ---------------------------------------------------------------------- */
 	/*	Contact Form
 	/* ---------------------------------------------------------------------- */
-	
+
 	// Needed variables
 	var $contactform 	= $('#contactform'),
 		$success		= 'Your message has been sent. Thank you!';
-		
+
 	$contactform.submit(function(){
 		$.ajax({
 		   type: "POST",
@@ -223,11 +223,11 @@ jQuery(document).ready(function(){
 			}
 		 });
 		return false;
-	});	
+	});
 	/* ---------------------------------------------------------------------- */
 	/*	Google Maps
 	/* ---------------------------------------------------------------------- */
-	
+
 	// Needed variables
 	var $map 				= $('#map'),
 		$tabContactClass 	= ('tab-contact'),
@@ -243,10 +243,10 @@ jQuery(document).ready(function(){
 
 	// Refresh Map
 	$content.bind('easytabs:after', function(evt,tab,panel) {
-		$map.gmap('refresh'); 
+		$map.gmap('refresh');
   	});
 
-      
-  
 
-});	
+
+
+});
