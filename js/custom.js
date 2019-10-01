@@ -227,26 +227,18 @@ jQuery(document).ready(function(){
 	/* ---------------------------------------------------------------------- */
 	/*	Google Maps
 	/* ---------------------------------------------------------------------- */
-
-	// Needed variables
-	var $map 				= $('#map'),
-		$tabContactClass 	= ('tab-contact'),
-		$lat 				= '35.867352',
-		$lon 				= '-78.767166';
-
-	$map.gmap().bind('init', function(ev, map) {
-		$map.gmap('addMarker', {'position': $lat +','+ $lon  , 'bounds': true}).click(function() {
-			$map.gmap('openInfoWindow', {'content': 'RTP, NC'}, this);
-		});
-		$map.gmap('option', 'zoom', 10);
+	
+	mapboxgl.accessToken = 'pk.eyJ1IjoibWFwdGFzdGlrIiwiYSI6ImNrMTc2c3ZpajA0ZTczbmxqMmlvMTdmdDIifQ.GX8YK8KDHdaUOWVToMUHaw';
+	var map = new mapboxgl.Map({
+		container: 'map', // container id
+		style: 'mapbox://styles/mapbox/streets-v11', // stylesheet location
+		center: [-78.638849, 35.805493], // starting position [lng, lat]
+		zoom: 10.5, // starting zoom,
+		pitch: 70
 	});
 
 	// Refresh Map
 	$content.bind('easytabs:after', function(evt,tab,panel) {
-		$map.gmap('refresh');
+		map.resize()
   	});
-
-
-
-
 });
