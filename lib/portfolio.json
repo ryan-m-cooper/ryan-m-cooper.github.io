@@ -67,7 +67,7 @@
     ],
     "cartography": [
         {
-            "title": "raleigh park access",
+            "title": "Raleigh Park Access",
             "url": "./assets/a_walk_to_the_park_infographic_hires.png",
             "thumbnail": "./assets/a_walk_to_the_park_infographic_thumb.png",
             "description": "This longform infographic examines 10 minute walk access to parks in Raleigh, NC and proposes a social equity approach to prioritizing access improvements.",
@@ -95,7 +95,7 @@
             ]
         },
         {
-            "title": "yellow-bellied sapsucker seasonal range",
+            "title": "Yellow-Bellied Sapsucker Seasonal Range",
             "url": "https://maptastik.us/30-day-map-challenge-2019/blog/day-09-yellow.html",
             "thumbnail": "./assets/day-09-yellow.png",
             "description": "I created this map depicting the seasonal range of the yellow-bellied sapsucker while participating in the 2019 30 Day Map Challenge. The day's theme was \"yellow\".",
