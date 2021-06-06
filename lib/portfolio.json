@@ -110,7 +110,7 @@
             "title": "Old North State Bike Race Map",
             "url": "./assets/old-north-state-race-hires.pdf",
             "thumbnail": "./assets/old-north-state-race-thumb-1.png",
-            "description": "Created for as part of a cartography assignment, this map plots a 3 part, 21 stage, 2,100 mile fiction bike race that criss-crosses North Carolina.",
+            "description": "Created for as part of a cartography assignment, this map plots a 3 part, 21 stage, 2,100 mile fictional bike race that criss-crosses North Carolina.",
             "stack": [
                 {
                     "name": "ArcGIS Pro",
