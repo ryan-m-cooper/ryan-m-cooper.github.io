@@ -141,7 +141,7 @@
     ],
     "data": [
         {
-            "title": "raleigh parks level of service profiler",
+            "title": "Raleigh Parks Level of Service Profiler",
             "url": "https://ebpa-census-block-profiler.glitch.me/",
             "thumbnail": "./assets/ebpa-profiler-1.png",
             "description": "I developed this application as a demonstration of how the parks level of service analysis my colleagues and I had developed could be visualized and integrated with other datasets relevant to park planning.",
@@ -181,6 +181,26 @@
             ]
         },
         {
+            "title": "Raleigh Center Analysis",
+            "url": "https://observablehq.com/@maptastik/raleigh-center-analysis",
+            "thumbnail": "./assets/raleigh-center-analysis-thumb.png",
+            "description": "This analysis started with a question from a colleague: 'Where is the center of Raleigh?' The definition of 'center,' especially for complex shapes like city boundaries, can be a bit thorny. Rather than answer the question definitively, I used the interacitve notebook format of Observable to explore the messiness of centrality.",
+            "stack": [
+                {
+                    "name": "Leaflet",
+                    "url": "https://leafletjs.com/"
+                },
+                {
+                    "name": "Observable",
+                    "url": "https://observablehq.com/"
+                },
+                {
+                    "name": "Turf.js",
+                    "url": "http://turfjs.org/"
+                }
+            ]
+        },
+        {
             "title": "GoRaleigh Bus Shelter Analysis",
             "url": "https://maptastik.us/30-day-map-challenge-2019/blog/day-01-points.html#Final-Map",
             "thumbnail": "./assets/goraleigh-bus-stop-analysis.png",
@@ -197,6 +217,26 @@
                 {
                     "name": "JupyterLab",
                     "url": "https://jupyter.org/"
+                }
+            ]
+        },
+        {
+            "title": "Clip and Dissolve Lines by a Polygon with Turf",
+            "url": "https://observablehq.com/@maptastik/clip-and-dissolve-lines-by-a-polygon",
+            "thumbnail": "./assets/clip-dissolve-turf-thumb.png",
+            "description": "While clipping a line by a polygon is simple with most any desktop GIS software, PostGIS, or Python, it is less straightforward to do so with JavaScript. In this notebooks I work through an approach to clipping lines by polygons using a combination of spatial functions available in Turf.",
+            "stack": [
+                {
+                    "name": "Leaflet",
+                    "url": "https://leafletjs.com/"
+                },
+                {
+                    "name": "Observable",
+                    "url": "https://observablehq.com/"
+                },
+                {
+                    "name": "Turf.js",
+                    "url": "http://turfjs.org/"
                 }
             ]
         },
