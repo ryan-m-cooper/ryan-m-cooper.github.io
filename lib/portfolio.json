@@ -49,6 +49,26 @@
             ]
         },
         {
+            "title": "Busiest Container Ports, 2004-2019",
+            "url": "https://maptastik.us/busiest-container-ports",
+            "thumbnail": "./assets/busiest-container-ports-1.png",
+            "description": "Created while taking a course in interactive cartography at the Universiy of Wisconsin, this application uses an examination of container port business in order to explore how to use JavaScript to give users the ability to filter the features on the map by multiple dimensions.",
+            "stack": [
+                {
+                    "name": "Leaflet",
+                    "url": "https://leafletjs.com/"
+                },
+                {
+                    "name": "jQuery",
+                    "url": "https://jquery.com/"
+                },
+                {
+                    "name": "Bootstrap",
+                    "url": "https://getbootstrap.com/"
+                }
+            ]
+        },
+        {
             "title": "Raleigh Park Amenities Finder",
             "url": "https://raleigh-park-amenities-finder.glitch.me/",
             "thumbnail": "./assets/ral-park-amenities-finder.png",
@@ -221,26 +241,6 @@
             ]
         },
         {
-            "title": "Clip and Dissolve Lines by a Polygon with Turf",
-            "url": "https://observablehq.com/@maptastik/clip-and-dissolve-lines-by-a-polygon",
-            "thumbnail": "./assets/clip-dissolve-turf-thumb.png",
-            "description": "While clipping a line by a polygon is simple with most any desktop GIS software, PostGIS, or Python, it is less straightforward to do so with JavaScript. In this notebooks I work through an approach to clipping lines by polygons using a combination of spatial functions available in Turf.",
-            "stack": [
-                {
-                    "name": "Leaflet",
-                    "url": "https://leafletjs.com/"
-                },
-                {
-                    "name": "Observable",
-                    "url": "https://observablehq.com/"
-                },
-                {
-                    "name": "Turf.js",
-                    "url": "http://turfjs.org/"
-                }
-            ]
-        },
-        {
             "title": "Raleigh Playground Gap Analysis",
             "url": "https://skarplab.github.io/playground-gap-service-analysis/",
             "thumbnail": "./assets/playground-analysis-app-1.png",
@@ -257,6 +257,56 @@
                 {
                     "name": "Valhalla routing engine",
                     "url": "https://github.com/valhalla/valhalla"
+                }
+            ]
+        }
+    ],
+    "experiments": [
+        {
+            "title": "Greenway Lightsabers",
+            "url": "https://codepen.io/maptastik/full/xxrobja",
+            "thumbnail": "./assets/greenway-lightsabers-2.gif",
+            "description": "The ArcGIS API for JavaScript 4.18 introduced the ability to apply CSS effects and Photoshop-like blend modes to feature layers. In 2021, access to these features was added to the ArcGIS Online Map Viewer. This experiment uses the Map Viewer to apply blend modes, layer effects, and group layers to define a glowing style to Raleigh's Greenway Trail dataset in order to give the impression that those trails are illuminating the underlying imagery basemap. I then use the ArcGIS API for JavaScript to load the map and manipulate the layer effects to generate a more organic, pulsing glow on the greenway trails.",
+            "stack": [
+                {
+                    "name": "ArcGIS API for JavaScript 4",
+                    "url": "https://developers.arcgis.com/javascript/latest/"
+                }
+            ]
+        },
+        {
+            "title": "Client-side Straight-line Distance to Center of Nearest Park",
+            "url": "https://codepen.io/maptastik/pen/QJbMOQ",
+            "thumbnail": "./assets/client-side-distance-1.gif",
+            "description": "This experiment explores how turfJS can be used to pull together multiple datasets into something totally different. First, turfJS to creates a bounding box based on the extent of the Raleigh planning jurisdiction. Then turfJS creates a grid that fits into that extent. Next, turfJS generates centroids for Raleigh parks and the grid squares. Finally turfJS is used to find the distance to the closest park centroid for each grid square.",
+            "stack": [
+                {
+                    "name": "Leaflet",
+                    "url": "https://leafletjs.com/"
+                },
+                {
+                    "name": "Turf.js",
+                    "url": "http://turfjs.org/"
+                }
+            ]
+        },
+        {
+            "title": "Clip and Dissolve Lines by a Polygon with Turf",
+            "url": "https://observablehq.com/@maptastik/clip-and-dissolve-lines-by-a-polygon",
+            "thumbnail": "./assets/clip-dissolve-turf-thumb.png",
+            "description": "While clipping a line by a polygon is simple with most any desktop GIS software, PostGIS, or Python, it is less straightforward to do so with JavaScript. In this notebook I work through an approach to clipping lines by polygons using a combination of spatial functions available in Turf.",
+            "stack": [
+                {
+                    "name": "Leaflet",
+                    "url": "https://leafletjs.com/"
+                },
+                {
+                    "name": "Observable",
+                    "url": "https://observablehq.com/"
+                },
+                {
+                    "name": "Turf.js",
+                    "url": "http://turfjs.org/"
                 }
             ]
         }
