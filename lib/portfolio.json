@@ -309,6 +309,22 @@
                     "url": "http://turfjs.org/"
                 }
             ]
+        },
+        {
+            "title": "54 Square Mile Raleigh",
+            "url": "https://54-sqmi-raleigh.glitch.me/",
+            "thumbnail": "./assets/54-sq-mi-raleigh-1.gif",
+            "description": "A discussion popped up in Raleigh about population density at the city's founding in the 18th century versus today. By one local's calculation, if the city had maintained it's density at founding through to today, the entire Raleigh population could fit into a 54 square mile area. This map seeks to make that area visible. With some basic geometry and help of the Turf JavaScript library, I generated both a 54 square mile circle and square centered on Raleigh's original center at the North Carolina Capitol.",
+            "stack": [
+                {
+                    "name": "Leaflet",
+                    "url": "https://leafletjs.com/"
+                },
+                {
+                    "name": "Turf.js",
+                    "url": "http://turfjs.org/"
+                }
+            ]
         }
     ]
 }
