@@ -1,10 +1,46 @@
 {
     "interactive": [
         {
+            "title": "WCPSS Base Attendance Areas",
+            "url": "https://osageo.wcpss.net/base-attendance-areas/",
+            "thumbnail": "./assets/wcpss-base-attendance-areas-1.png",
+            "description": "The official public-facing map used by Wake County Public School System (WCPSS) to help families research base school assignments by grade level and school year.",
+            "stack": [
+                {
+                    "name": "ArcGIS API for JavaScript 4",
+                    "url": "https://developers.arcgis.com/javascript/latest/"
+                },
+                {
+                    "name": "Calcite Design System",
+                    "url": "https://developers.arcgis.com/calcite-design-system/"
+                },
+                {
+                    "name": "PHP",
+                    "url": "https://www.php.net/"
+                }
+            ]
+        },
+        {
+            "title": "WCPSS Assignment Lookup",
+            "url": "https://osageo.wcpss.net/assignment-lookup/",
+            "thumbnail": "./assets/wcpss-assignment-lookup-1.png",
+            "description": "This application serves as the official, public-facing tool for families learn more about their base school assignment at Wake County Public School System. Users input a valid residential address and are returned information on that location's base school assignment, calendar, and transportation for each grade level.",
+            "stack": [
+                {
+                    "name": "PostGIS",
+                    "url": "https://postgis.net/"
+                },
+                {
+                    "name": "PHP",
+                    "url": "https://www.php.net/"
+                }
+            ]
+        },
+        {
             "title": "PRCR Bird's Eye",
-            "url": "https://skarplab.github.io/prcr-birdseye/",
+            "url": "https://prcr-birdseye-maptastik.glitch.me/",
             "thumbnail": "./assets/prcr-birds-eye-1.png",
-            "description": "An application for use by Raleigh Parks' planning staff to view parks and greenway areas using the oblique imagery layer provided through Microsoft's Bing Maps.",
+            "description": "An application I developed for use by Raleigh Parks' planning staff to view parks and greenway areas using the oblique imagery layer provided through Microsoft's Bing Maps.",
             "stack": [
                 {
                     "name": "Bing Maps API",
@@ -65,22 +101,6 @@
                 {
                     "name": "Bootstrap",
                     "url": "https://getbootstrap.com/"
-                }
-            ]
-        },
-        {
-            "title": "Raleigh Park Amenities Finder",
-            "url": "https://raleigh-park-amenities-finder.glitch.me/",
-            "thumbnail": "./assets/ral-park-amenities-finder.png",
-            "description": "This map shows the location of all of Raleigh's parks with an option to filter based on park type and amenities.",
-            "stack": [
-                {
-                    "name": "Mapbox GL JS",
-                    "url": "https://www.mapbox.com/mapbox-gljs"
-                },
-                {
-                    "name": "Mapbox Studio",
-                    "url": "https://www.mapbox.com/mapbox-studio"
                 }
             ]
         }
@@ -164,7 +184,7 @@
             "title": "Raleigh Parks Level of Service Profiler",
             "url": "https://ebpa-census-block-profiler.glitch.me/",
             "thumbnail": "./assets/ebpa-profiler-1.png",
-            "description": "I developed this application as a demonstration of how the parks level of service analysis my colleagues and I had developed could be visualized and integrated with other datasets relevant to park planning.",
+            "description": "I built this application as a demonstration of how the parks level of service analysis my colleagues and I had developed could be visualized and integrated with other datasets relevant to park planning.",
             "stack": [
                 {
                     "name": "Chart.js",
