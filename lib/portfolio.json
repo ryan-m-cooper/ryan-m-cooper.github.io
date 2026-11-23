@@ -18,7 +18,8 @@
                     "name": "PHP",
                     "url": "https://www.php.net/"
                 }
-            ]
+            ],
+            "active": true
         },
         {
             "title": "WCPSS Assignment Lookup",
@@ -34,7 +35,8 @@
                     "name": "PHP",
                     "url": "https://www.php.net/"
                 }
-            ]
+            ],
+            "active":true
         },
         {
             "title": "PRCR Bird's Eye",
@@ -54,7 +56,8 @@
                     "name": "Turf.js",
                     "url": "http://turfjs.org/"
                 }
-            ]
+            ],
+            "active": false
         },
         {
             "title": "Raleigh Property Query Tool",
@@ -66,7 +69,8 @@
                     "name": "ArcGIS API for JavaScript 4",
                     "url": "https://developers.arcgis.com/javascript/latest/"
                 }
-            ]
+            ],
+            "active": true
         },
         {
             "title": "Kentucky Population Projections",
@@ -82,7 +86,8 @@
                     "name": "D3.js",
                     "url": "https://d3js.org/"
                 }
-            ]
+            ],
+            "active": false
         },
         {
             "title": "Busiest Container Ports, 2004-2019",
@@ -102,7 +107,8 @@
                     "name": "Bootstrap",
                     "url": "https://getbootstrap.com/"
                 }
-            ]
+            ],
+            "active": true
         }
     ],
     "cartography": [
@@ -132,7 +138,8 @@
                     "name": "Valhalla Routing Engine",
                     "url": "https://github.com/valhalla/valhalla"
                 }
-            ]
+            ],
+            "active": true
         },
         {
             "title": "Yellow-Bellied Sapsucker Seasonal Range",
@@ -144,7 +151,8 @@
                     "name": "QGIS 3",
                     "url": "https://qgis.org/"
                 }
-            ]
+            ],
+            "active": true
         },
         {
             "title": "Old North State Bike Race Map",
@@ -164,7 +172,8 @@
                     "name": "Adobe Photoshop",
                     "url": "https://www.adobe.com/products/photoshop.html"
                 }
-            ]
+            ],
+            "active": true
         },
         {
             "title": "Citrix Cycle Raleigh Bike Share Rides",
@@ -176,13 +185,14 @@
                     "name": "QGIS 3",
                     "url": "https://qgis.org/"
                 }
-            ]
+            ],
+            "active": true
         }
     ],
     "data": [
         {
             "title": "Raleigh Parks Level of Service Profiler",
-            "url": "https://ebpa-census-block-profiler.glitch.me/",
+            "url": "https://maptastik.us/ebpa-census-block-profiler",
             "thumbnail": "./assets/ebpa-profiler-1.png",
             "description": "I built this application as a demonstration of how the parks level of service analysis my colleagues and I had developed could be visualized and integrated with other datasets relevant to park planning.",
             "stack": [
@@ -218,7 +228,8 @@
                     "name": "Turf.js",
                     "url": "http://turfjs.org/"
                 }
-            ]
+            ],
+            "active": true
         },
         {
             "title": "Raleigh Center Analysis",
@@ -238,7 +249,8 @@
                     "name": "Turf.js",
                     "url": "http://turfjs.org/"
                 }
-            ]
+            ],
+            "active": true
         },
         {
             "title": "GoRaleigh Bus Shelter Analysis",
@@ -258,7 +270,8 @@
                     "name": "JupyterLab",
                     "url": "https://jupyter.org/"
                 }
-            ]
+            ],
+            "active": false
         },
         {
             "title": "Raleigh Playground Gap Analysis",
@@ -278,7 +291,8 @@
                     "name": "Valhalla routing engine",
                     "url": "https://github.com/valhalla/valhalla"
                 }
-            ]
+            ],
+            "active": true
         }
     ],
     "experiments": [
@@ -292,7 +306,8 @@
                     "name": "ArcGIS API for JavaScript 4",
                     "url": "https://developers.arcgis.com/javascript/latest/"
                 }
-            ]
+            ],
+            "active": true
         },
         {
             "title": "Client-side Straight-line Distance to Center of Nearest Park",
@@ -308,7 +323,8 @@
                     "name": "Turf.js",
                     "url": "http://turfjs.org/"
                 }
-            ]
+            ],
+            "active": true
         },
         {
             "title": "Clip and Dissolve Lines by a Polygon with Turf",
@@ -328,7 +344,8 @@
                     "name": "Turf.js",
                     "url": "http://turfjs.org/"
                 }
-            ]
+            ],
+            "active": true
         },
         {
             "title": "54 Square Mile Raleigh",
@@ -344,7 +361,8 @@
                     "name": "Turf.js",
                     "url": "http://turfjs.org/"
                 }
-            ]
+            ],
+            "active": false
         }
     ]
 }
